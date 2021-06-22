@@ -20,7 +20,7 @@ def compress(inputFolder):
         '-format', 'jpg',
         '-colorspace', 'sRGB',
         '-sampling-factor', '4:2:0',
-        '-quality', '80', 
+        '-quality', '75', 
         #'-resize', '100%',
         '-path', outputFolder,
         inputFolder + "/*\.jp*g"], 
@@ -143,8 +143,6 @@ doCompress = args.compress
 storeCompressed = args.store_compressed
 delCompressed = args.delete_compressed
 delOriginals = args.delete_originals
-
-print("args: " + str(args))
 
 if doPack | doCompress:
     packageCbzs(path, doCompress, doPack)
